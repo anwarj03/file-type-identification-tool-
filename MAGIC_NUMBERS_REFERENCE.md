@@ -233,25 +233,6 @@ def validate_upload(uploaded_file):
 - **ELF Specification**: http://www.skyfree.org/linux/references/ELF_Format.pdf
 - **MIME Types**: https://www.iana.org/assignments/media-types/media-types.xhtml
 
-## Practice Exercise
-
-Try these commands to explore magic numbers:
-
-```bash
-# 1. Create test files
-python create_test_files.py
-
-# 2. View magic numbers manually
-xxd -l 16 test_files/malware.jpg
-xxd -l 16 test_files/legitimate_image.png
-
-# 3. Run the analyzer
-python file_type_identifier.py test_files/
-
-# 4. Compare results
-# Notice how malware.jpg shows "MZ" (4D 5A) instead of JPEG magic (FF D8 FF)
-```
-
 ---
 
 **Remember**: File extensions are just names. Magic numbers reveal the truth.
